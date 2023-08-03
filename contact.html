@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href='./images/mardi.ico'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Contact</title>
+    <style>
+        body {
+            background: linear-gradient(#9453a6, #f2cc0f);
+            /* background-image: url('./images/images.jpeg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 100%; */
+
+        }
+
+        * {
+            box-sizing: border-box;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="topnav" id="myTopnav">
+        <a href="#top">CONTACT</a>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="media.html">MEDIA</a>
+        <a href="fAQ.html">FAQ</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <div class="contaict" style="text-align: center; color: #0d0d0d">
+        <h1 style="font-size: 5rem; font-family: 'Henny Penny'">Contact us</h1>
+        <div><label for="yourName">name:</label>
+            <input id="yourName" type="text" placeholder="Your name" required>
+        </div><br>
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Your last name" required>
+        </div><br>
+        <div>
+            <label for="yourEmail" maxlength="20">Email:</label>
+            <input type="text" id="yourEmail" placeholder="Your E-mail" required>
+        </div><br>
+        <div><label for="textara">Text:</label>
+            <br>
+            <textarea style="resize:none;" placeholder="comments,questions and more" id="" cols="30" maxlength="50"
+                rows="5"></textarea>
+        </div>
+        <input style="width: 130px;" type="submit" id="button" value="Submit" onclick="sendYourDetails()">
+    </div>
+
+    <!-- Script of contact -->
+    <script>
+        function sendYourDetails() {
+            // console.log('hey');
+            let email = document.getElementById('yourEmail').value;
+            let name = document.getElementById('yourName').value;
+            let lastname = document.getElementById('lastName').value;
+            if (!email.includes('@')) {
+                alert('something wrong, try again')
+            }
+            if (lastname == name && lastname.length < 2 && name.length < 2) {
+                document.getElementById('button').disabled = true;
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <footer style="margin-bottom: 0;">
+        <h6 class="copyright">&copy; Mardi-Gras 2022</h6> <br>
+        <h6>Construction of the site by HareLool Rub</h6><br>
+        <h6>For orders:<span class="copyright">rubharel@gmail.com</span></h6><br>
+        <h6> <a href="Contact.html">For Contact: Click here</a><br>
+        </h6>
+</body>
+
+</html>
